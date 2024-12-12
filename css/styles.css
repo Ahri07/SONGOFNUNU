@@ -1,0 +1,220 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif; /* Cambiamos la fuente */
+    color: #dcdcdc; /* Cambiamos el color del texto */
+    background-color: #000;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(#808080, #000); /* Degradado de gris a negro */
+    
+    position: relative;
+}
+
+header .logo img {
+    height: 60px; /* Ajusta según el tamaño del logo */
+    object-fit: contain;
+    margin-right: auto; /* Empuja el logo a la izquierda */
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    overflow-x: auto; /* Agrega scroll horizontal si el contenido no cabe */
+    position: relative; /* Permite posicionar elementos dentro */
+}
+
+.home-container {
+    display: flex;
+    gap: 50px; /* Espacio entre las columnas */
+    flex-wrap: nowrap; /* Evita que el contenido salte hacia abajo */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Imagen del lado izquierdo */
+.home-image img {
+    max-width: 90%; /* Imagen completamente responsive */
+   
+}
+
+/* Contenido del lado derecho */
+.home-content {
+   
+    max-width: 500px;
+    margin-top: -40px; /* Sube el bloque hacia arriba */
+}
+
+.home-logo {
+    max-width: 100%; /* Asegura que el logo sea responsive */
+    height: auto;
+    margin-bottom: 30px; /* Espaciado entre logo y texto */
+}
+
+.home-content p {
+    margin: 20px 0;
+    font-size: 20px; /* Tamaño del texto más grande */
+    line-height: 1.6;
+    font-weight: 300; /* Más delgado */
+    color: #bfbfbf; /* Color gris claro */
+}
+
+/* Sinopsis y Trailer */
+.sinopsis-trailer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px; /* Espaciado entre sinopsis y tráiler */
+    padding: 50px 20px;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+}
+
+.sinopsis {
+    flex: 1; /* Toma espacio proporcional */
+    max-width: 50%; /* Limita el ancho */
+}
+
+.sinopsis h2,
+.trailer h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sinopsis p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.sinopsis-images {
+    display: flex;
+    gap: 20px; /* Espaciado entre las imágenes */
+}
+
+
+
+.trailer {
+    flex: 1; /* Toma espacio proporcional */
+    max-width: 50%; /* Limita el ancho */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    margin-top: 40px; /* Ajusta este valor para moverlo más abajo */
+}
+
+.trailer-video {
+    width: 100%; /* Ajusta el ancho del tráiler */
+    max-width: 600px; /* Limita el ancho máximo */
+    border-radius: 10px;
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    margin-top: 40px; /* Mueve únicamente la imagen hacia abajo */
+}
+
+.trailer-video img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Sección Ubicaciones */
+.ubicaciones {
+    padding: 50px 20px;
+    background-color: #000; /* Fondo negro */
+    text-align: center;
+    color: #fff; /* Texto blanco */
+}
+
+.ubicaciones h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Contenedor de las Ubicaciones */
+.ubicaciones-container {
+    display: flex;
+    gap: 20px; /* Espaciado entre imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    flex-wrap: wrap; /* Permite que las imágenes salten de línea en pantallas pequeñas */
+}
+
+/* Estilo de cada Ubicación */
+.ubicacion {
+    flex: 1 1 calc(25% - 20px); /* Tamaño proporcional (cuatro imágenes por fila) */
+    max-width: 250px; /* Ancho máximo */
+    height: 350px; /* Altura fija para el recorte */
+    overflow: hidden; /* Oculta contenido que sobresalga */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    transition: transform 0.3s ease;
+}
+
+.ubicacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen para ajustarse al contenedor */
+    object-position: center; /* Centra el recorte */
+    transition: transform 0.3s ease;
+}
+
+
+/* Sección de Personajes */
+.personajes {
+    padding: 50px 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.personajes h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+/* Ajuste de la Imagen */
+.character-image {
+    width: 200px; /* Tamaño fijo para la imagen */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0; /* Evita que la imagen cambie de tamaño si el texto ocupa más espacio */
+}
+
+/* Texto */
+.character-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.character-alias {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #00f2ff;
+}
+
+.character-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ccc;
+    flex: 1; /* El texto ocupa el espacio restante */
+}
