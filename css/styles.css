@@ -21,6 +21,13 @@ header .logo img {
     margin-right: auto; 
 }
 
+#menuNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1erm;
+}
+
 nav {
     position: absolute;
     left: 50%;
@@ -35,6 +42,18 @@ nav .menu {
     justify-content: space-around;
     gap: 30px; /* Espacio entre enlaces */
 }
+
+#menuNav .fa-xmark,
+#menuNav .fa-bars{
+    color: aliceblue;
+    cursor: pointer;
+}
+
+#menuNav #btnOpenMenu,
+#menuNav #btnCloseMenu{
+    display: none;
+}
+
 
 nav .menu li {
     display: inline;
@@ -493,27 +512,52 @@ nav .menu a:not(:hover) {
 
 @media (max-width: 900px) {
 
+    nav .menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        background-color: rgb(59, 59, 59);
+        position: fixed;
+        top: -10000%;
+        left: 0;      
+    }
+
+    nav .menu.show-menu{
+        top:-100%;
+        
+    }
+
+    #menuNav #btnOpenMenu,
+    #menuNav #btnCloseMenu{
+    display: block;
+    }
+
     header {
         justify-content: space-between;
     }
 
+
+    nav .menu a {
+        font-size: 18px;
+    }
+
     /* Ajustes generales */
     .home-container {
-        flex-direction: column; /* Apila los elementos */
+        flex-direction: column; 
     }
 
     .sinopsis-trailer {
         display: flex;
-        flex-direction: column; /* Cambia la disposición a columna */
-        align-items: center; /* Centra horizontalmente */
-        gap: 30px; /* Espaciado entre las secciones */
-        text-align: center; /* Centra el texto */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 30px; 
+        text-align: center;
     }
 
     .sinopsis,
     .trailer {
-        max-width: 90%; /* Reduce el ancho para adaptarse */
-        margin: 0 auto; /* Centra horizontalmente */
+        max-width: 90%; 
+        margin: 0 auto; 
     }
 
 
@@ -532,19 +576,19 @@ nav .menu a:not(:hover) {
     }
 
     .character-image {
-        margin-bottom: 20px; /* Espacio debajo de la imagen */
+        margin-bottom: 20px;
     }
 
     .contact-container {
         display: flex;
-        flex-direction: column; /* Cambia a disposición vertical */
-        align-items: center; /* Centra horizontalmente */
-        gap: 20px; /* Espacio entre los elementos */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
     }
 
     .contact-info {
-        text-align: center; /* Centra el texto */
-        margin-bottom: 20px; /* Espaciado inferior */
+        text-align: center; 
+        margin-bottom: 20px; 
     }
 
     .contact-form {
@@ -552,7 +596,7 @@ nav .menu a:not(:hover) {
     }
 
     .contact-form textarea {
-        height: 120px; /* Ajusta la altura del cuadro de texto */
+        height: 120px; 
     }
 
     .contact-image {
@@ -565,7 +609,7 @@ nav .menu a:not(:hover) {
     
     .footer-logos {
         flex-wrap: wrap;
-        gap: 40px; /* Ajusta el espacio entre logos */
+        gap: 40px;
     }
 
 
@@ -573,7 +617,7 @@ nav .menu a:not(:hover) {
 }
  
 @media (max-width: 450px) {
-    /* Header - Menú hamburguesa */
+ 
 
     nav.active .menu {
         display: flex;
@@ -594,25 +638,25 @@ nav .menu a:not(:hover) {
 
     /* Ajustes generales */
     .home-container {
-        flex-direction: column; /* Apila los elementos */
+        flex-direction: column; 
     }
 
     .home-image img {
-        max-width: 80%; /* Reduce el tamaño de la imagen */
+        max-width: 80%; 
     }
 
     .sinopsis-trailer {
         display: flex;
-        flex-direction: column; /* Cambia la disposición a columna */
-        align-items: center; /* Centra horizontalmente */
-        gap: 20px; /* Espaciado entre las secciones */
-        text-align: center; /* Centra el texto */
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px; 
+        text-align: center; 
     }
 
     .sinopsis,
     .trailer {
-        max-width: 100%; /* Ocupa el ancho completo */
-        margin: 0 auto; /* Centra horizontalmente */
+        max-width: 100%; 
+        margin: 0 auto; 
     }
 
     .ubicaciones-container {
@@ -620,11 +664,11 @@ nav .menu a:not(:hover) {
     }
 
     .ubicacion {
-        flex: 1 1 100%; /* Una imagen por fila */
+        flex: 1 1 100%; 
     }
     
     .contact-image img {
-        max-width: 200px; /* Reduce el tamaño de la imagen */
+        max-width: 200px; 
     }
     
     .footer-logos {
