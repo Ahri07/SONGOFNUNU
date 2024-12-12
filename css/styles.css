@@ -68,16 +68,8 @@ header .logo img {
     color: #bfbfbf; /* Color gris claro */
 }
 
-/* Sinopsis y Trailer */
-.sinopsis-trailer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 50px; /* Espaciado entre sinopsis y tráiler */
-    padding: 50px 20px;
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
-}
+/* Estilo del botón */
+
 
 .sinopsis {
     flex: 1; /* Toma espacio proporcional */
@@ -105,6 +97,20 @@ header .logo img {
 }
 
 
+
+.sinopsis-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.sinopsis-image span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
 
 .trailer {
     flex: 1; /* Toma espacio proporcional */
@@ -146,24 +152,6 @@ header .logo img {
     font-weight: bold;
 }
 
-/* Contenedor de las Ubicaciones */
-.ubicaciones-container {
-    display: flex;
-    gap: 20px; /* Espaciado entre imágenes */
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    flex-wrap: wrap; /* Permite que las imágenes salten de línea en pantallas pequeñas */
-}
-
-/* Estilo de cada Ubicación */
-.ubicacion {
-    flex: 1 1 calc(25% - 20px); /* Tamaño proporcional (cuatro imágenes por fila) */
-    max-width: 250px; /* Ancho máximo */
-    height: 350px; /* Altura fija para el recorte */
-    overflow: hidden; /* Oculta contenido que sobresalga */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
-    transition: transform 0.3s ease;
-}
 
 .ubicacion img {
     width: 100%;
@@ -172,7 +160,6 @@ header .logo img {
     object-position: center; /* Centra el recorte */
     transition: transform 0.3s ease;
 }
-
 
 /* Sección de Personajes */
 .personajes {
@@ -188,6 +175,7 @@ header .logo img {
     margin-bottom: 20px;
     font-weight: bold;
 }
+
 /* Ajuste de la Imagen */
 .character-image {
     width: 200px; /* Tamaño fijo para la imagen */
@@ -218,3 +206,118 @@ header .logo img {
     color: #ccc;
     flex: 1; /* El texto ocupa el espacio restante */
 }
+
+
+
+
+/* Alinear los botones */
+.prev-btn {
+    position: relative;
+    left: -10px; /* Ajusta la posición a la izquierda */
+}
+
+.next-btn {
+    position: relative;
+    right: -10px; /* Ajusta la posición a la derecha */
+}
+
+/* Sección de contacto */
+.contacto {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Contenedor principal */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas: izquierda, formulario, derecha */
+    gap: 30px; /* Espaciado entre columnas */
+    align-items: center; /* Alinea verticalmente el contenido */
+    margin-bottom: 30px;
+}
+
+/* Información de contacto */
+.contact-info {
+    text-align: left;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contact-info strong {
+    display: block; /* Cada etiqueta en una nueva línea */
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.contact-form button:hover {
+    background: #00b4cc;
+}
+
+/* Imagen decorativa */
+.contact-image {
+    text-align: center;
+}
+
+.contact-image img {
+    max-width: 300px; /* Tamaño más grande para que coincida con el diseño */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a; /* Fondo menos negro */
+    color: #ccc;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px; /* Espaciado entre los logos */
+    margin-bottom: 10px;
+}
+
+.footer-logos img {
+    max-width: 200px; /* Aumenta el tamaño máximo de los logos */
+    height: auto;
+}
+
+.footer-text {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+}
+
