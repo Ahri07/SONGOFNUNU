@@ -1,8 +1,8 @@
 /* styles.css */
 body {
     margin: 0;
-    font-family: "Arial", sans-serif; /* Cambiamos la fuente */
-    color: #dcdcdc; /* Cambiamos el color del texto */
+    font-family: "Arial", sans-serif; 
+    color: #dcdcdc; 
     background-color: #000;
 }
 
@@ -10,32 +10,33 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    background: linear-gradient(#808080, #000); /* Degradado de gris a negro */
+    background: linear-gradient(#808080, #000); 
     
     position: relative;
 }
 
 header .logo img {
-    height: 60px; /* Ajusta según el tamaño del logo */
+    height: 60px; 
     object-fit: contain;
-    margin-right: auto; /* Empuja el logo a la izquierda */
+    margin-right: auto; 
 }
+
 
 .home {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
-    overflow-x: auto; /* Agrega scroll horizontal si el contenido no cabe */
-    position: relative; /* Permite posicionar elementos dentro */
+    background-color: #000; 
+    color: #fff; 
+    overflow-x: auto; 
+    position: relative; 
 }
 
 .home-container {
     display: flex;
-    gap: 50px; /* Espacio entre las columnas */
-    flex-wrap: nowrap; /* Evita que el contenido salte hacia abajo */
+    gap: 50px; 
+    flex-wrap: nowrap; 
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -43,7 +44,7 @@ header .logo img {
 
 /* Imagen del lado izquierdo */
 .home-image img {
-    max-width: 90%; /* Imagen completamente responsive */
+    max-width: 90%; 
    
 }
 
@@ -51,29 +52,57 @@ header .logo img {
 .home-content {
    
     max-width: 500px;
-    margin-top: -40px; /* Sube el bloque hacia arriba */
+    margin-top: -40px; 
 }
 
 .home-logo {
-    max-width: 100%; /* Asegura que el logo sea responsive */
+    max-width: 100%; 
     height: auto;
-    margin-bottom: 30px; /* Espaciado entre logo y texto */
+    margin-bottom: 30px;
 }
 
 .home-content p {
     margin: 20px 0;
-    font-size: 20px; /* Tamaño del texto más grande */
+    font-size: 20px; 
     line-height: 1.6;
-    font-weight: 300; /* Más delgado */
-    color: #bfbfbf; /* Color gris claro */
+    font-weight: 300; 
+    color: #bfbfbf; 
 }
 
 /* Estilo del botón */
+.home-button {
+    display: inline-block;
+    padding: 12px 30px; 
+    font-size: 18px; 
+    font-weight: bold;
+    color: #fff; 
+    background: linear-gradient(#00aaff, #0066ff); 
+    border: 2px solid #0066ff;
+    border-radius: 50px; 
+    text-decoration: none;
+    transition:transform 0.2s;
+}
 
+.home-button:hover {
+    background: linear-gradient(#0066ff, #00aaff); 
+    transform: scale(1.1); 
+    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.5); 
+}
+
+/* Sinopsis y Trailer */
+.sinopsis-trailer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px; 
+    padding: 50px 20px;
+    background-color: #000; 
+    color: #fff; 
+}
 
 .sinopsis {
-    flex: 1; /* Toma espacio proporcional */
-    max-width: 50%; /* Limita el ancho */
+    flex: 1; 
+    max-width: 50%; 
 }
 
 .sinopsis h2,
@@ -93,10 +122,22 @@ header .logo img {
 
 .sinopsis-images {
     display: flex;
-    gap: 20px; /* Espaciado entre las imágenes */
+    gap: 20px; 
 }
 
+.sinopsis-image {
+    text-align: center;
+    background: linear-gradient(#1f1f1f,#00f2ff); 
+    padding: 20px;
+    border: 2px solid #00f2ff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.3s; 
+}
 
+.sinopsis-image:hover {
+    transform: scale(1.05); 
+}
 
 .sinopsis-image img {
     max-width: 100%;
@@ -113,22 +154,22 @@ header .logo img {
 }
 
 .trailer {
-    flex: 1; /* Toma espacio proporcional */
-    max-width: 50%; /* Limita el ancho */
+    flex: 1; 
+    max-width: 50%; 
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
-    margin-top: 40px; /* Ajusta este valor para moverlo más abajo */
+    align-items: center; 
+    margin-top: 40px; /
 }
 
 .trailer-video {
-    width: 100%; /* Ajusta el ancho del tráiler */
-    max-width: 600px; /* Limita el ancho máximo */
+    width: 100%; 
+    max-width: 600px; 
     border-radius: 10px;
-    overflow: hidden; /* Oculta cualquier desbordamiento */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
-    margin-top: 40px; /* Mueve únicamente la imagen hacia abajo */
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    margin-top: 40px; 
 }
 
 .trailer-video img {
@@ -140,9 +181,9 @@ header .logo img {
 /* Sección Ubicaciones */
 .ubicaciones {
     padding: 50px 20px;
-    background-color: #000; /* Fondo negro */
+    background-color: #000; 
     text-align: center;
-    color: #fff; /* Texto blanco */
+    color: #fff; 
 }
 
 .ubicaciones h2 {
@@ -152,13 +193,36 @@ header .logo img {
     font-weight: bold;
 }
 
+/* Contenedor de las Ubicaciones */
+.ubicaciones-container {
+    display: flex;
+    gap: 20px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+/* Estilo de cada Ubicación */
+.ubicacion {
+    flex: 1 1 calc(25% - 20px); /* Tamaño proporcional (cuatro imágenes por fila) */
+    max-width: 250px; 
+    height: 350px; 
+    overflow: hidden; /* Oculta contenido que sobresalga */
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
 
 .ubicacion img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Recorta la imagen para ajustarse al contenedor */
-    object-position: center; /* Centra el recorte */
-    transition: transform 0.3s ease;
+    object-fit: cover; 
+    object-position: center; 
+    transition: transform 0.3s;
+}
+
+/* Efecto al pasar el ratón */
+.ubicacion:hover img {
+    transform: scale(1.1);
 }
 
 /* Sección de Personajes */
@@ -175,14 +239,28 @@ header .logo img {
     margin-bottom: 20px;
     font-weight: bold;
 }
+/* Contenedor del Carrusel */
+.carousel-content {
+    background: linear-gradient(145deg, #1a1a1a, #2c2c2c);
+    border: 2px solid #00f2ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 800px;
+    flex-grow: 1;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    gap: 20px; 
+    text-align: left;
+}
 
 /* Ajuste de la Imagen */
 .character-image {
-    width: 200px; /* Tamaño fijo para la imagen */
+    width: 200px; 
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    flex-shrink: 0; /* Evita que la imagen cambie de tamaño si el texto ocupa más espacio */
 }
 
 /* Texto */
@@ -207,7 +285,35 @@ header .logo img {
     flex: 1; /* El texto ocupa el espacio restante */
 }
 
+/* Aseguramos que los Botones estén Correctamente Posicionados */
+.carousel {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px;
+    position: relative;
+    margin-top: 20px;
+}
 
+.carousel-btn {
+    font-size: 24px;
+    color: #fff;
+    background: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: #00f2ff;
+    color: #000;
+}
 
 
 /* Alinear los botones */
@@ -240,8 +346,8 @@ header .logo img {
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr; /* Tres columnas: izquierda, formulario, derecha */
-    gap: 30px; /* Espaciado entre columnas */
-    align-items: center; /* Alinea verticalmente el contenido */
+    gap: 30px; 
+    align-items: center; 
     margin-bottom: 30px;
 }
 
@@ -258,7 +364,7 @@ header .logo img {
 }
 
 .contact-info strong {
-    display: block; /* Cada etiqueta en una nueva línea */
+    display: block; 
     font-size: 16px;
     color: #fff;
 }
@@ -276,6 +382,32 @@ header .logo img {
     color: #fff;
 }
 
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #ff4d4d; 
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    resize: none; 
+    height: 100px; 
+}
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background: #00f2ff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
 .contact-form button:hover {
     background: #00b4cc;
@@ -287,7 +419,7 @@ header .logo img {
 }
 
 .contact-image img {
-    max-width: 300px; /* Tamaño más grande para que coincida con el diseño */
+    max-width: 300px; 
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -295,7 +427,7 @@ header .logo img {
 
 /* Footer */
 .footer {
-    background-color: #1a1a1a; /* Fondo menos negro */
+    background-color: #1a1a1a; 
     color: #ccc;
     text-align: center;
     padding: 30px 0;
@@ -306,12 +438,12 @@ header .logo img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 130px; /* Espaciado entre los logos */
+    gap: 130px; 
     margin-bottom: 10px;
 }
 
 .footer-logos img {
-    max-width: 200px; /* Aumenta el tamaño máximo de los logos */
+    max-width: 200px;
     height: auto;
 }
 
