@@ -43,15 +43,15 @@ const personajes = [
 ];
 
 // Elementos del DOM
-const nameElement = document.querySelector(".character-name");
-const aliasElement = document.querySelector(".character-alias");
-const descriptionElement = document.querySelector(".character-description");
-const imageElement = document.querySelector(".character-image");
-const carouselContent = document.querySelector(".carousel-content");
+let nameElement = document.querySelector(".character-name");
+let aliasElement = document.querySelector(".character-alias");
+let descriptionElement = document.querySelector(".character-description");
+let imageElement = document.querySelector(".character-image");
+let carouselContent = document.querySelector(".carousel-content");
 
 // Botones
-const prevButton = document.querySelector(".prev-btn");
-const nextButton = document.querySelector(".next-btn");
+let prevButton = document.querySelector(".prev-btn");
+let nextButton = document.querySelector(".next-btn");
 
 let currentIndex = 0;
 

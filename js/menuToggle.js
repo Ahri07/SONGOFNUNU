@@ -1,11 +1,13 @@
-let menuOpts = document.querySelector("#menuNav .menu");
-let btnOpenMenu = document.querySelector("#btnOpenMenu");
-let btnCloseMenu = document.querySelector("#btnCloseMenu");
+    let menu = document.querySelector("nav .menu");
+    let btnOpenMenu = document.querySelector("#btnOpenMenu");
+    let btnCloseMenu = document.querySelector("#btnCloseMenu");
 
-btnOpenMenu.addEventListener("click", function () {
-    menuOpts.classList.add("show-menu"); // Mostrar menú
-});
+    // Abrir el menú
+    btnOpenMenu.addEventListener("click", () => {
+        menu.classList.add("show-menu");
+    });
 
-btnCloseMenu.addEventListener("click", function () {
-    menuOpts.classList.remove("show-menu"); // Ocultar menú
-});
+    // Cerrar el menú
+    btnCloseMenu.addEventListener("click", () => {
+        menu.classList.remove("show-menu");
+    });
