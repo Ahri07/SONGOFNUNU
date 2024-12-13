@@ -3,11 +3,11 @@
     let btnCloseMenu = document.querySelector("#btnCloseMenu");
 
     // Abrir el menú
-    btnOpenMenu.addEventListener("click", () => {
+    btnOpenMenu.addEventListener("click", function() {
         menu.classList.add("show-menu");
     });
 
     // Cerrar el menú
-    btnCloseMenu.addEventListener("click", () => {
+    btnCloseMenu.addEventListener("click", function() {
         menu.classList.remove("show-menu");
     });

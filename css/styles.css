@@ -11,7 +11,6 @@ header {
     align-items: center;
     padding: 10px 20px;
     background: linear-gradient(#808080, #000); 
-
 }
 
 header .logo img {
@@ -30,12 +29,11 @@ header .logo img {
 nav {
     position: relative;
     display: flex;
-    justify-content: center; /* Centra el menú horizontalmente */
-    align-items: center; /* Alinea el contenido verticalmente */
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    width: 100%; 
 }
-
 
 nav .menu {
     display: flex;
@@ -91,12 +89,10 @@ nav .menu a:hover {
 /* Imagen del lado izquierdo */
 .home-image img {
     max-width: 90%; 
-   
 }
 
 /* Contenido del lado derecho */
 .home-content {
-   
     max-width: 500px;
     margin-top: -40px; 
 }
@@ -141,7 +137,7 @@ nav .menu a:hover {
     justify-content: space-between;
     align-items: flex-start;
     gap: 50px; 
-    padding: 50px 20px;
+    padding: 50px 150px;
     background-color: #000; 
     color: #fff; 
 }
@@ -285,21 +281,6 @@ nav .menu a:hover {
     margin-bottom: 20px;
     font-weight: bold;
 }
-/* Contenedor del Carrusel */
-.carousel-content {
-    background: linear-gradient(145deg, #1a1a1a, #2c2c2c);
-    border: 2px solid #00f2ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    max-width: 800px;
-    flex-grow: 1;
-    display: flex; 
-    flex-direction: row; 
-    align-items: center;
-    gap: 20px; 
-    text-align: left;
-}
 
 /* Ajuste de la Imagen */
 .character-image {
@@ -339,6 +320,23 @@ nav .menu a:hover {
     gap: 20px;
     position: relative;
     margin-top: 20px;
+    overflow: hidden; /* Evita contenido que sobresalga */
+}
+
+/* Contenedor del Carrusel */
+.carousel-content {
+    background: linear-gradient(145deg, #1a1a1a, #2c2c2c);
+    border: 2px solid #00f2ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 800px;
+    flex-grow: 1;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    gap: 20px; 
+    text-align: left;
 }
 
 .carousel-btn {
@@ -353,7 +351,6 @@ nav .menu a:hover {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
 .carousel-btn:hover {
@@ -377,7 +374,7 @@ nav .menu a:hover {
 .contacto {
     background-color: #000;
     color: #fff;
-    padding: 50px 20px;
+    padding: 50px 80px;
     text-align: center;
 }
 
@@ -515,7 +512,7 @@ nav .menu a:hover {
     top: 0px;
     left: 0;
     width: 100%;
-    height: 25vh; 
+    height: 50vh; 
     z-index: 1;
     }   
 
@@ -559,6 +556,7 @@ nav .menu a:hover {
         flex-direction: column; 
         align-items: center; 
         gap: 30px; 
+        padding: 50px 20px;
         text-align: center;
     }
 
@@ -587,13 +585,17 @@ nav .menu a:hover {
         margin-bottom: 20px;
     }
 
+    .contacto {
+        padding: 50px 20px;
+    }
+
     .contact-container {
         display: flex;
         flex-direction: column; 
         align-items: center; 
         gap: 20px; 
     }
-
+    
     .contact-info {
         text-align: center; 
         margin-bottom: 20px; 
@@ -637,21 +639,6 @@ nav .menu a:hover {
     .home-image img {
         max-width: 80%; 
     }
-
-    .sinopsis-trailer {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        gap: 20px; 
-        text-align: center; 
-    }
-
-    .sinopsis,
-    .trailer {
-        max-width: 100%; 
-        margin: 0 auto; 
-    }
-
     .ubicaciones-container {
         gap: 10px;
     }

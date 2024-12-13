@@ -66,12 +66,12 @@ function updateCarousel(index) {
 }
 
 // Eventos de los botones
-prevButton.addEventListener("click", () => {
+prevButton.addEventListener("click", function() {
     currentIndex = (currentIndex - 1 + personajes.length) % personajes.length;
     updateCarousel(currentIndex);
 });
 
-nextButton.addEventListener("click", () => {
+nextButton.addEventListener("click", function() {
     currentIndex = (currentIndex + 1) % personajes.length;
     updateCarousel(currentIndex);
 });
